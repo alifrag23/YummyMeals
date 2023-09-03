@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./image/logo.ico" type="image/x-icon" />
+    <!--?========== Google-Fonts ========== -->
+
+    <!--?========== Bootstrap-CSS ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--?========== Fontawesome-CSS ========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!--?========== Main-CSS ========== -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Yummy</title>
+  </head>
+  <body>
+    <div class="loading-page">
+      <span class="loader"></span>
+    </div>
+    <div class="menue bg-black d-flex align-items-start">
+      <div id="menueDetails">
+        <div class="flex-container">
+          <div class="flex-items text-s">
+            <ul class="px-4" id="menueList">
+              <li><a href="#search">Search</a></li>
+              <li><a href="#category">Categories</a></li>
+              <li><a href="#area">Area</a></li>
+              <li><a href="#ingredients">Ingredients</a></li>
+              <li><a href="#contcatUs">Contact Us</a></li>
+              <!-- <li><a href="#MealsCateg">mealDeatails</a></li> -->
+            </ul>
+          </div>
+
+          <div class="flex-items footer-menue text-center">
+            <ul
+              class="list-icons px-4 d-flex justify-content-ar align-items-center"
+            >
+              <li class="">
+                <a href="#" title="fa-icon"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li class="px-2">
+                <a href="#" title="tw-icon"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li class="">
+                <a href="#" title="earth-icon"
+                  ><i class="fa-solid fa-globe"></i
+                ></a>
+              </li>
+            </ul>
+            <p class="copy px-3">
+              Copyright Â© 2019 All Rights <br />
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container bg-white text-center">
+        <div class="flex-items text-center">
+          <!-- <p class="text-center fw-bolder px-3" id="logo">logo</p> -->
+          <img
+          id="logo"
+            src="./image/download.jpg"
+            class="bg-danger w-75"
+            alt="logo-image"
+          />
+        </div>
+
+        <div class="flex-items fs-1">
+          <i id="barMenue" class="fa-solid fa-bars"></i>
+          <i id="barClose" class="d-none fa-solid fa-xmark"></i>
+        </div>
+        <div class="flex-items footicons">
+          <ul class="p-0">
+            <li>
+              <a href="#" title="earth-icon"
+                ><i class="fa-solid fs-4 fa-globe"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" title="share-ico"
+                ><i class="fa-solid fs-4 py-2 fa-share-nodes"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <div class="container">
+        <div class="row gy-4" id="homeDisp"></div>
+      </div>
+    </div>
+    <main>
+      <section id="search" class="">
+        <div
+          class="inputs w-75 m-auto d-flex align-items-center justify-content-between py-5"
+        >
+          <input
+            class="form-control w-50 m-3"
+            id="serchByName"
+            type="text"
+            placeholder="Search By Name"
+          />
+          <input
+            class="form-control w-50"
+            id="serchByFLetter"
+            type="text"
+            placeholder="Search By First Letter"
+            maxlength="1"
+          />
+        </div>
+        <div class="container">
+          <div class="row gy-4" id="SearchNameDisp"></div>
+        </div>
+      </section>
+      <section id="category" class="py-3">
+        <div class="loading-categ">
+          <span class="loader-4"></span>
+        </div>
+        <div class="container">
+          <div class="row gy-4" id="catgDisp"></div>
+        </div>
+      </section>
+      <section id="area" class="text-center">
+        <div class="loading-area">
+          <span class="loader-3"></span>
+        </div>
+        <div class="container py-3">
+          <div class="row text-center" id="areaDisp"></div>
+        </div>
+      </section>
+      <section id="ingredients" class="">
+        <div class="container">
+          <div class="loading-ingerd">
+            <span class="loader-2"></span>
+          </div>
+          <div class="row" id="ingredDisp"></div>
+        </div>
+      </section>
+      <!-- d-flex  -->
+      <section id="contcatUs" class="align-items-center justify-content-center">
+        <div class="container">
+          <div class="row w-75 m-auto contact-inputs">
+            <div class="col-md-6">
+              <input
+                id="userName"
+                class="my-2 p-2 w-100 is-invalid"
+                type="text"
+                placeholder="Enter Your Name"
+              />
+              <p id="alerName" class="d-none alert alert-danger">
+                Special characters and numbers not allowed
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userEmail"
+                class="my-2 p-2 w-100"
+                type="email"
+                placeholder="Enter Your Email"
+              />
+              <p id="alerEmail" class="d-none alert alert-danger">
+                Email not valid *exemple@yyy.zzz
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userPhone"
+                class="my-2 p-2 w-100"
+                type="number"
+                placeholder="Enter Your Phone"
+              />
+              <p id="alerPhone" class="d-none alert alert-danger">
+                Enter valid Phone Number
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userAge"
+                class="my-2 p-2 w-100"
+                type="number"
+                placeholder="Enter Your Age"
+              />
+              <p id="alerAge" class="d-none alert alert-danger">
+                Enter valid age
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userPass"
+                class="my-2 p-2 w-100"
+                type="password"
+                placeholder="Enter Your Password"
+              />
+              <p id="alerPass" class="d-none alert alert-danger">
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userRePass"
+                class="my-2 p-2 w-100"
+                type="password"
+                placeholder="RePassword"
+              />
+              <p id="alerRePass" class="d-none alert alert-danger">
+                Enter valid repassword
+              </p>
+            </div>
+            <button
+              class="btn w-25 m-auto my-3"
+              type="submit"
+              disabled
+              id="submitBtn"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="infil" class="py-3">
+        <div class="container">
+          <div class="row gy-4" id="ingredFilterDis"></div>
+        </div>
+      </section>
+      <section id="areaMeals" class="">
+        <div class="container">
+          <div class="row gy-4" id="areaMealsDisp"></div>
+        </div>
+      </section>
+      <section class="meal-details py-5 text-white" id="mealDeatails">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                id="mainImage"
+                class="w-100 rounded rounded-2"
+                alt="imges meals"
+              />
+              <p id="mealName" class="fs-3 p-2 fw-medium"></p>
+            </div>
+            <div class="col-md-8">
+              <h2>Instructions</h2>
+              <p id="mealDetail" class="lead"></p>
+              <h4 class="py-2">Area : <span id="ares"></span></h4>
+              <h4 class="py-1">Category : <span id="categ"></span></h4>
+              <h4 class="py-2">Recipes :</h4>
+              <div class="details" id="details">
+                <div class="py-4">
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes1"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes2"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes3"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes4"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes5"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75"
+                    id="recipes6"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75 d-none"
+                    id="recipes7"
+                    ></span
+                  >
+                </div>
+                <div class="py-2 pb-4">
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75 d-none"
+                    id="recipes8"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75 d-none"
+                    id="recipes9"
+                    ></span
+                  >
+                  <span
+                    class="bg-info rounded rounded-2 p-2 bg-opacity-75 d-none"
+                    id="recipes10"
+                    ></span
+                  >
+              </div>
+              <h4 class="pt-2">Tags :</h4>
+              <span
+                id="tages"
+                class="tags d-inline-block alert alert-danger"
+              ></span>
+              <div class="btns">
+                <a
+                  href=""
+                  id="sourceBtn"
+                  target="_blank"
+                  class="btn btn-success px-4"
+                  >Source</a
+                >
+                <a
+                  href=""
+                  id="YoutubeBtn"
+                  target="_blank"
+                  class="btn btn-danger px-4 ms-4"
+                  >Youtube</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="MealsCateg" class="">
+        <div class="container">
+          <div class="row gy-4" id="areaMealsCateg"></div>
+        </div>
+      </section>
+    </main>
+    <!--?========== Jquery ========== -->
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!--?========== Bootstarp-JS ========== -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--?========== Main-JS ========== -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
